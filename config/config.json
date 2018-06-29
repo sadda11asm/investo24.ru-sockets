@@ -1,0 +1,12 @@
+{
+	"port" : 5333,
+	"server": {
+		"host": "localhost",
+		"user": "root",
+		"password": "Mandriva2012",
+		"port": "3306",
+		"database": "investo23"
+	},
+	"userInfo": 
+	"SELECT avatar, IF(u.user_type = 1,(SELECT CONCAT_WS(' ',surname,name) as fio FROM phis_users WHERE user_id = u.id),(SELECT company_name FROM legal_users WHERE user_id = u.id)) as fio FROM users as u WHERE id = ? "
+}
